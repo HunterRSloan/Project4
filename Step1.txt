@@ -1,0 +1,30 @@
+CODE:
+
+% Define your first and last name
+name_sort_reverse(Name, Sorted, Reversed, ReverseSorted) :-
+    Name = 'Hunter Sloan',
+    string_chars(Name, NameChars),
+    
+    % Sort characters in alphabetical order
+    sort(NameChars, Sorted),
+    
+    % Reverse the characters
+    reverse(NameChars, Reversed),
+    
+    % Sort characters in reverse alphabetical order
+    reverse(Sorted, ReverseSorted).
+
+QUERY:
+
+name_sort_reverse(Name, Sorted, Reversed, ReverseSorted).
+
+
+OUTPUT:
+
+
+
+name_sort_reverse(Name, Sorted, Reversed, ReverseSorted).
+Name = 'Hunter Sloan',
+ReverseSorted = [u, t, r, o, n, l, e, a, 'S', 'H', ' '],
+Reversed = [n, a, o, l, 'S', ' ', r, e, t, n, u, 'H'],
+Sorted = [' ', 'H', 'S', a, e, l, n, o, r, t, u]
